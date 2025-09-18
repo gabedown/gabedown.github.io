@@ -52,3 +52,4 @@ $(function () {
 
   registerSetup(setup);
 });
+createPlatform(200, 200) 
