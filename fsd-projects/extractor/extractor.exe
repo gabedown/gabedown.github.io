@@ -1,0 +1,5 @@
+<div id="extractor-box">
+  <h2>Easy Extractor</h2>
+  <p>Drag & drop files here to extract</p>
+  <a href="extractor.exe" download id="download-button">Download Extractor</a>
+</div>
