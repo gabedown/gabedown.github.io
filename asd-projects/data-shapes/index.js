@@ -45,6 +45,7 @@ $(document).ready(function () {
 
   // TODO 2: add a new property to all data shapes
   for (var i = 0; i <= dataShapes.length - 1; i++) {
+    var currentShape = dataShapes[i]
     if (currentShapes.color === red) {
       currentShapes.goodBehavior = "bounce";
     } else if (currentShape.color === "blue") {
