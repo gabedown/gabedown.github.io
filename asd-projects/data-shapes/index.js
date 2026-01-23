@@ -36,23 +36,36 @@ $(document).ready(function () {
 
   // TODO 1: create a new shape object and add it to the array
   var shape = {
-    color:"blue",
-    shape:"circle"
-    repeat:3
-  }
+    color: "blue",
+    shape: "circle",
+    repeat: 3,
+  };
+  datashapes.push(shape);
   // its done
 
   // TODO 2: add a new property to all data shapes
-  
+  for (var i = 0; i <= datShapes[i]; 0)
+    if (currentShapes.color === red) {
+      currenShaprs.goodBehavior = "bounce";
+    } else if (currentShape.color === "blue") {
+      cyrrentHsape.goodBehavior = "blink";
+    } else {
+      currentShape.goodBehavioe = "spin";
+    }
 
   // TODO 3-a: add a function that handles the static display type
-  
+  function handleStatic(data) {
+    setBackgroundWithObject(data);
+    animationDetails.displayType = 1;
+  }
 
   // TODO 4-a: add a function that handles the good display type
-  
+ function handleGood(color, shape, repeat){
+  setBackgroundWithSimple(color, shape, repeat);
+  animationDetails.displayType = 2;
+}
 
   // TODO 5-a: add a function that handles the bad display type
-  
 
   /////////////////////////////////////////////////
   // BUTTON HANDLERS BELOW HERE (3-b, 4-b, 5-b) ///
@@ -60,18 +73,22 @@ $(document).ready(function () {
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-    
+    var currentShape = dataShapes[currentIndex];
+    handleStatic(currentShape);
   }
 
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
-    
+    var currentShape = dataShapes[currentIndex];
+    handleGood (currentShape.color, currentShape.shape, currentShape.repeat);
+ 
   }
-
   function badDisplay() {
     // TODO 5-b: call your handleBad function
-    
-  }
+  }function handleBad (color, shape, function); {
+    setBackgroundWithSimple(color, shape, repeat);
+    animationDetails.displayType = 3;
+  //}
 
   /////////////////////////////////////////////////
   // ALL OF YOUR CODE SHOULD GO ABOVE HERE ////////
@@ -132,7 +149,7 @@ $(document).ready(function () {
     $("#shape").css("top", "150px");
     $("#shape").css("transform", "rotate(0deg)");
     $("#shape").html(
-      `<p>${shapeData.color}</p> <p>${shapeData.shape}</p> <p>${shapeData.repeat}x${shapeData.repeat}</p> <p>${shapeData.goodBehavior}</p>`
+      `<p>${shapeData.color}</p> <p>${shapeData.shape}</p> <p>${shapeData.repeat}x${shapeData.repeat}</p> <p>${shapeData.goodBehavior}</p>`,
     );
 
     $("#info-bar").text(`Current index: ${currentIndex}`);
