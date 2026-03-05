@@ -70,7 +70,7 @@ function init() {
  */
 function update() {
   // TODO 6, Part 2: Fill in the update function's code block
-  console.log("updating...");
+  //console.log("updating...");
   if (started) {
     moveSnake();
   }
@@ -94,20 +94,20 @@ function checkForNewDirection(event) {
 
   if (activeKey === KEY.LEFT) {
     snake.head.direction = "left";
-  }  if (activeKey === KEY.DOWN)
-     {
+  }
+  else if (activeKey === KEY.DOWN) {
     snake.head.direction = "DOWN";
-  } if (activeKey === KEY.UP)
-     {
+  }
+  else if (activeKey === KEY.UP) {
     snake.head.direction = "UP";
-  }  if (activeKey === KEY.RIGHT)
-     {
+  }
+  else if (activeKey === KEY.RIGHT) {
     snake.head.direction = "RIGHT";
   }
 
   // FILL IN THE REST
 
-   console.log(snake.head.direction);     
+  console.log(snake.head.direction);
 }
 
 function moveSnake() {
@@ -130,6 +130,19 @@ function moveSnake() {
     of snake.head.direction which may be one of "left", "right", "up", or "down"
   */
 }
+if (snake.head.direction === "left") {
+  snake.head.column = snake.head.column - 1;
+} 
+else if (snake.head.direction === "right") {
+  snake.head.column = snake.head.column + 1;
+}
+ else if (snake.head.direction === "up") {
+  snake.head.row = snake.head.row - 1;
+}
+ else if (snake.head.direction === "left") {
+  snake.head.row = snake.head.row + 1;
+}
+repositionSquare(snake.head);
 
 // TODO 9: Create a new helper function
 
