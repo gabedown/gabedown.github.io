@@ -138,7 +138,7 @@ function moveSnake() {
   }
   }
   repositionSquare(snake.head);
-}
+
 
 repositionSquare(snake.head);
 
