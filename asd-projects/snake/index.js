@@ -134,9 +134,9 @@ function moveSnake() {
     snake.head.row = snake.head.row - 1;
   }
     else if (snake.head.direction === "down") {
-    snake.head.column = snake.head.column + 1;
-  }
-  }
+    snake.head.row = snake.head.row + 1;
+  }repositionSquare(snake.head);
+  }repositionSquare(snake.head);
   repositionSquare(snake.head);
 
 
