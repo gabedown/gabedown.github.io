@@ -136,18 +136,22 @@ function moveSnake() {
     else if (snake.head.direction === "down") {
     snake.head.row = snake.head.row + 1;
   }repositionSquare(snake.head);
-  }repositionSquare(snake.head);
-  repositionSquare(snake.head);
+  }
 
 
 repositionSquare(snake.head);
 
 // TODO 9: Create a new helper function
-function moveBodyAToBody(bodyA, bodyB){
+function moveBodyAToBodyB(bodyA, bodyB){
 bodyA.row = bodyB.row
+bodyA.column = bodyB.column
+bodyA.direction = bodyB.column
 }
-
-function hasHitWall() {
+console.log("Moving body A to body B...");
+setTimeout(() => {
+  moveBodyAToBodyB(snake.body[1], snake.head);
+  repositionSquare(snake.body[1]);
+}, 2_000); {
   /* 
     TODO 11: Should return true if the snake's head has collided with the four walls of the
     board, false otherwise.
