@@ -26,8 +26,8 @@ $(document).ready(function () {
     displayType: 0,
   };
 
-  // This line produces most of the data array and stores it in the variable "dataShapes"
-  const dataShapes = generateShapeData();
+  // This line produces most of the data array and stores it in the variable "dataShape"
+  const dataShape = generateShapeData();
   var currentIndex = 0;
 
   /////////////////////////////////////////////////
@@ -35,21 +35,21 @@ $(document).ready(function () {
   /////////////////////////////////////////////////
 
   // TODO 1: create a new shape object and add it to the array
-  var shape = {
+  var Shape = {
     color: "blue",
     shape: "circle",
     repeat: 3,
   };
-  datashapes.push(shape);
+  dataShape.push(Shape);
   // its done
 
-  // TODO 2: add a new property to all data shapes
-  for (var i = 0; i <= dataShapes.length - 1; i++) {
-    var currentShape = dataShapes[i]
-    if (currentShapes.color === red) {
-      currentShapes.goodBehavior = "bounce";
+  // TODO 2: add a new property to all data Shape
+  for (var i = 0; i <= dataShape.length - 1; i++) {
+    var currentShape = dataShape[i]
+    if (currentShape.color === "red") {
+      currentShape.goodBehavior = "bounce";
     } else if (currentShape.color === "blue") {
-      currentShapes.goodBehavior = "blink";
+      currentShape.goodBehavior = "blink";
     } else {
       currentShape.goodBehavior = "spin";
     }
@@ -79,18 +79,18 @@ $(document).ready(function () {
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-    var currentShape = dataShapes[currentIndex];
+    var currentShape = dataShape[currentIndex];
     handleStatic(currentShape);
   }
 
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
-    var currentShape = dataShapes[currentIndex];
+    var currentShape = dataShape[currentIndex];
     handleGood(currentShape.color, currentShape.shape, currentShape.repeat);
   }
   function badDisplay() {
     // TODO 5-b: call your handleBad function
-    var currentShape = dataShapes[currentIndex];
+    var currentShape = dataShape[currentIndex];
     var repeat = currentShape.repathandleBad(currentShape, repeat);
     handleBad(currentShape, repeat);
   }
@@ -98,25 +98,25 @@ $(document).ready(function () {
   // ALL OF YOUR CODE SHOULD GO ABOVE HERE ////////
   /////////////////////////////////////////////////
 
-  // This function generates objects for 26 of the necessary 27 entries into the dataShapes array that is used for most of this program
+  // This function generates objects for 26 of the necessary 27 entries into the dataShape array that is used for most of this program
   function generateShapeData() {
     const data = [];
     const colors = ["red", "green", "blue"];
-    const shapes = ["square", "triangle", "circle"];
+    const Shape = ["square", "triangle", "circle"];
     const repeats = [1, 2, 3];
 
     for (var i = 0; i < colors.length; i++) {
-      for (var j = 0; j < shapes.length; j++) {
+      for (var j = 0; j < Shape.length; j++) {
         for (var k = 0; k < repeats.length; k++) {
           // This condition limits the number of objects created by skipping the combo of "blue circle 3"
           if (
             i !== colors.length - 1 ||
-            j !== shapes.length - 1 ||
+            j !== Shape.length - 1 ||
             k !== repeats.length - 1
           ) {
             const newObj = {
               color: colors[i],
-              shape: shapes[j],
+              shape: Shape[j],
               repeat: repeats[k],
             };
             data.push(newObj);
@@ -130,20 +130,20 @@ $(document).ready(function () {
 
   // This function decrements the index of the currently selected object in the array (and resets the display type)
   function decrementIndex() {
-    currentIndex = currentIndex ? currentIndex - 1 : dataShapes.length - 1;
+    currentIndex = currentIndex ? currentIndex - 1 : dataShape.length - 1;
     resetDisplay();
   }
 
   // This function increments the index of the currently selected object in the array (and resets the display type)
   function incrementIndex() {
     currentIndex =
-      currentIndex === dataShapes.length - 1 ? 0 : currentIndex + 1;
+      currentIndex === dataShape.length - 1 ? 0 : currentIndex + 1;
     resetDisplay();
   }
 
   // This function resets the display type to the default display (only shows data)
   function resetDisplay() {
-    const shapeData = dataShapes[currentIndex];
+    const shapeData = dataShape[currentIndex];
 
     // Reset all of the CSS and HTML
     $("#shape").css("background", "none");
@@ -200,7 +200,7 @@ $(document).ready(function () {
       return;
     }
     if (animationDetails.displayType === 2) {
-      switch (dataShapes[currentIndex].goodBehavior) {
+      switch (dataShape[currentIndex].goodBehavior) {
         case "bounce":
           animateBounce();
           break;
@@ -212,7 +212,7 @@ $(document).ready(function () {
           break;
       }
     } else {
-      switch (dataShapes[currentIndex].goodBehavior) {
+      switch (dataShape[currentIndex].goodBehavior) {
         case "bounce":
           animateBlink();
           animateSpin();
