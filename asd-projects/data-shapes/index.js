@@ -91,8 +91,7 @@ $(document).ready(function () {
   function badDisplay() {
     // TODO 5-b: call your handleBad function
     var currentShape = dataShape[currentIndex];
-    var repeat = currentShape.repathandleBad(currentShape, repeat);
-    handleBad(currentShape, repeat);
+    var repeat = currentShape.repeat; handleBad(currentShape, repeat);
   }
   /////////////////////////////////////////////////
   // ALL OF YOUR CODE SHOULD GO ABOVE HERE ////////
