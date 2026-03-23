@@ -116,9 +116,14 @@ function moveSnake() {
     stored in the Array snake.body and each part knows its current 
     column/row properties. 
   */
-
+ for (var i = snake.body.length -1; i > 0 ; i -=1){
+       var currentSnakeSquare = snake.body [i];
+       var  snakeSquareInFront = [i - 1];
+       var currentSnakeSquare}
   //Before moving the head, check for a new direction from the keyboard input
   checkForNewDirection();
+  moveBodyAToBodyB( currentSnakeSquare, snakeSquareInFront);
+  repositionSquare(currentSnakeSquare)
 
   /* 
     TODO 8: determine the next row and column for the snake's head
@@ -147,11 +152,12 @@ bodyA.row = bodyB.row;
 bodyA.column = bodyB.column;
 bodyA.direction = bodyB.direction;
 }
-console.log("Moving body A to body B...");
-setTimeout(() => {
-  moveBodyAToBodyB(snake.body[1], snake.head);
-  repositionSquare(snake.body[1]);
-}, 2_000); 
+// console.log("Moving body A to body B...");
+// setTimeout(() => {
+//   moveBodyAToBodyB(snake.body[1], snake.head);
+//   repositionSquare(snake.body[1]);
+// }, 2_000); 
+
   function hasHitWall(){
   /* 
     TODO 11: Should return true if the snake's head has collided with the four walls of the
