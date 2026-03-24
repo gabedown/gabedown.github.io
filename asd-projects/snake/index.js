@@ -166,12 +166,20 @@ bodyA.direction = bodyB.direction;
     board, false otherwise.
     
     HINT: What will the row and column of the snake's head be if this were the case?
-  */ if (snake.head.row <= 0)
-  return ture  
-  
-  if (snake.head.columns <= 0)
-  return ture  
+  */ if (snake.head.row < 0){
+  return true  
+  }
+  if (snake.head.columns >= ROWS){
+  return true  
+  } 
 
+   if (snake.head.row < 0){
+  return true  
+  }
+  if (snake.head.columns >= COLUMNS){
+  return true  
+  }
+  else {
   return false;
 }
 
