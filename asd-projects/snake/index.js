@@ -146,7 +146,6 @@ function moveSnake() {
   }
 
 
-repositionSquare(snake.head);
 
 // TODO 9: Create a new helper function
 function moveBodyAToBodyB(bodyA, bodyB){
@@ -169,14 +168,14 @@ bodyA.direction = bodyB.direction;
   */ if (snake.head.row < 0){
   return true;  
   }   if (snake.head.row >= ROWS){
-  return true  
+  return true;  
   }
     
     
   if (snake.head.column < 0){
-  return true  
-  }  if (snake.head.columns <= COLUMNS){
-  return true  
+  return true;  
+  }  if (snake.head.column <= COLUMNS){
+  return true;
   }
 
    
