@@ -118,12 +118,14 @@ function moveSnake() {
   */
  for (var i = snake.body.length -1; i > 0 ; i -=1){
        var currentSnakeSquare = snake.body [i];
-       var  snakeSquareInFront = [i - 1];
-       var currentSnakeSquare}
+       var  snakeSquareInFront = snake.body [i - 1];
+        moveBodyAToBodyB( currentSnakeSquare, snakeSquareInFront);
+  repositionSquare(currentSnakeSquare)
+ }
   //Before moving the head, check for a new direction from the keyboard input
   checkForNewDirection();
-  moveBodyAToBodyB( currentSnakeSquare, snakeSquareInFront);
-  repositionSquare(currentSnakeSquare)
+  // moveBodyAToBodyB( currentSnakeSquare, snakeSquareInFront);
+  // repositionSquare(currentSnakeSquare)
 
   /* 
     TODO 8: determine the next row and column for the snake's head
@@ -164,7 +166,11 @@ bodyA.direction = bodyB.direction;
     board, false otherwise.
     
     HINT: What will the row and column of the snake's head be if this were the case?
-  */
+  */ if (snake.head.row <= 0)
+  return ture  
+  
+  if (snake.head.columns <= 0)
+  return ture  
 
   return false;
 }
