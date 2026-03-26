@@ -185,9 +185,9 @@ bodyA.direction = bodyB.direction;
 }
   }
 function hasCollidedWithApple() { 
-  if (snake.head.row === apple.row && snake.head. === handleAppleCollision)
-    return true {
-  else return fales }
+  if (snake.head.row === apple.row && snake.head. === apple.column){}
+    return true }
+  else { return false
   /*  
     TODO 12: Should return true if the snake's head has collided with the apple, 
     false otherwise
