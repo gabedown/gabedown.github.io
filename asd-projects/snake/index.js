@@ -174,16 +174,16 @@ bodyA.direction = bodyB.direction;
     
   if (snake.head.column < 0){
   return true;  
-  }  if (snake.head.column <= COLUMNS){
+  }  if (snake.head.column >= COLUMNS){
   return true;
   }
 
    
   
-  else 
+  else {
   return false;
 }
-
+  }
 function hasCollidedWithApple() {
   /* 
     TODO 12: Should return true if the snake's head has collided with the apple, 
