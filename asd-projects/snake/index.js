@@ -84,7 +84,7 @@ function update() {
   }
 }
 
-function checkForNewDirection(event) {
+function checkForNewDirection() {
   /* 
   TODO 7: Update snake.head.direction based on the value of activeKey.
   
@@ -184,8 +184,11 @@ bodyA.direction = bodyB.direction;
   return false;
 }
   }
-function hasCollidedWithApple() {
-  /* 
+function hasCollidedWithApple() { 
+  if (snake.head.row === apple.row && snake.head. === handleAppleCollision)
+    return true {
+  else return fales }
+  /*  
     TODO 12: Should return true if the snake's head has collided with the apple, 
     false otherwise
     
