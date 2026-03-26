@@ -352,7 +352,15 @@ function getRandomAvailablePosition() {
       spaceIsAvailable to false so that a new position is generated.
     */
   }
-
+ for (var i = 0; i < snake.body.length; i++){
+  var snakePart = snake.Body[i];
+ } if (
+  snakePart.column === randomPosition.column && 
+  snake.row === randomPosition.row
+ ) {
+  spaceIsAvailable = false
+ }
+  
   return randomPosition;
 }
 
