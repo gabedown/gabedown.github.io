@@ -185,7 +185,7 @@ bodyA.direction = bodyB.direction;
 }
   }
 function hasCollidedWithApple() { 
-  if (snake.head.row === apple.row && snake.head.column === apple.column){}
+  if (snake.head.row === apple.row && snake.head.column === apple.column){
     return true }
   else { return false}
   /*  
@@ -226,7 +226,7 @@ for (var i = 1; i < snake.body.length; i++) {
   if (
     currentSnakeSquare.row === snake.head.row &&
     currentSnakeSquare.column === snake.head.column
-  )
+  ) { 
 }
   return false;
 {
