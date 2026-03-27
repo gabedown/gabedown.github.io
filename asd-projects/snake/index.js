@@ -185,17 +185,17 @@ bodyA.direction = bodyB.direction;
 }
   }
 function hasCollidedWithApple() { 
-  if (snake.head.row === apple.row && snake.head. === apple.column){}
+  if (snake.head.row === apple.row && snake.head.column === apple.column){}
     return true }
-  else { return false
+  else { return false}
   /*  
     TODO 12: Should return true if the snake's head has collided with the apple, 
     false otherwise
     
     HINT: Both the apple and the snake's head are aware of their own row and column
   */
-
-  return false;
+  
+  
 }
 
 function handleAppleCollision() {
@@ -221,7 +221,13 @@ function hasCollidedWithSnake() {
     HINT: Each part of the snake's body is stored in the snake.body Array. The
     head and each part of the snake's body also knows its own row and column.
   */
-
+for (var i = 1; i < snake.body.lenght; i++) {
+  var currentSnakeSquare = snake.body[i];
+  if (
+    currentSnakeSquare.row === snake.head.row
+    currentSnakeSquare.column === snake.head.column
+  )
+}
   return false;
 }
 
