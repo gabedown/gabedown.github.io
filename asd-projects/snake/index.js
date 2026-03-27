@@ -116,12 +116,12 @@ function moveSnake() {
     stored in the Array snake.body and each part knows its current 
     column/row properties. 
   */
- for (var i = snake.body.length -1; i > 0 ; i -=1){
-       var currentSnakeSquare = snake.body [i];
-       var  snakeSquareInFront = snake.body [i - 1];
-        moveBodyAToBodyB( currentSnakeSquare, snakeSquareInFront);
-  repositionSquare(currentSnakeSquare)
- }
+  for (var i = snake.body.length - 1; i > 0; i -= 1) {
+    var currentSnakeSquare = snake.body[i];
+    var snakeSquareInFront = snake.body[i - 1];
+    moveBodyAToBodyB(currentSnakeSquare, snakeSquareInFront);
+    repositionSquare(currentSnakeSquare);
+  }
   //Before moving the head, check for a new direction from the keyboard input
   checkForNewDirection();
   // moveBodyAToBodyB( currentSnakeSquare, snakeSquareInFront);
@@ -139,63 +139,58 @@ function moveSnake() {
     snake.head.column = snake.head.column + 1;
   } else if (snake.head.direction === "up") {
     snake.head.row = snake.head.row - 1;
-  }
-    else if (snake.head.direction === "down") {
+  } else if (snake.head.direction === "down") {
     snake.head.row = snake.head.row + 1;
-  }repositionSquare(snake.head);
   }
-
-
+  repositionSquare(snake.head);
+}
 
 // TODO 9: Create a new helper function
-function moveBodyAToBodyB(bodyA, bodyB){
-bodyA.row = bodyB.row;
-bodyA.column = bodyB.column;
-bodyA.direction = bodyB.direction;
+function moveBodyAToBodyB(bodyA, bodyB) {
+  bodyA.row = bodyB.row;
+  bodyA.column = bodyB.column;
+  bodyA.direction = bodyB.direction;
 }
 // console.log("Moving body A to body B...");
 // setTimeout(() => {
 //   moveBodyAToBodyB(snake.body[1], snake.head);
 //   repositionSquare(snake.body[1]);
-// }, 2_000); 
+// }, 2_000);
 
-  function hasHitWall(){
+function hasHitWall() {
   /* 
     TODO 11: Should return true if the snake's head has collided with the four walls of the
     board, false otherwise.
     
     HINT: What will the row and column of the snake's head be if this were the case?
-  */ if (snake.head.row < 0){
-  return true;  
-  }   if (snake.head.row >= ROWS){
-  return true;  
+  */ if (snake.head.row < 0) {
+    return true;
   }
-    
-    
-  if (snake.head.column < 0){
-  return true;  
-  }  if (snake.head.column >= COLUMNS){
-  return true;
+  if (snake.head.row >= ROWS) {
+    return true;
   }
 
-   
-  
-  else {
-  return false;
-}
+  if (snake.head.column < 0) {
+    return true;
   }
-function hasCollidedWithApple() { 
-  if (snake.head.row === apple.row && snake.head.column === apple.column){
-    return true }
-  else { return false}
+  if (snake.head.column >= COLUMNS) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function hasCollidedWithApple() {
+  if (snake.head.row === apple.row && snake.head.column === apple.column) {
+    return true;
+  } else {
+    return false;
+  }
   /*  
     TODO 12: Should return true if the snake's head has collided with the apple, 
     false otherwise
     
     HINT: Both the apple and the snake's head are aware of their own row and column
   */
-  
-  
 }
 
 function handleAppleCollision() {
@@ -221,16 +216,17 @@ function hasCollidedWithSnake() {
     HINT: Each part of the snake's body is stored in the snake.body Array. The
     head and each part of the snake's body also knows its own row and column.
   */
-for (var i = 1; i < snake.body.length; i++) {
-  var currentSnakeSquare = snake.body[i];
-  if (
-    currentSnakeSquare.row === snake.head.row &&
-    currentSnakeSquare.column === snake.head.column
-  ) { 
-}
-  return false;
-{
-  return true;
+  for (var i = 1; i < snake.body.length; i++) {
+    var currentSnakeSquare = snake.body[i];
+    if (
+      currentSnakeSquare.row === snake.head.row &&
+      currentSnakeSquare.column === snake.head.column
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 function endGame() {
@@ -363,16 +359,18 @@ function getRandomAvailablePosition() {
       spaceIsAvailable to false so that a new position is generated.
     */
   }
- for (var i = 0; i < snake.body.length; i++){
-  var snakePart = snake.Body[i];
- } if (
-  snakePart.column === randomPosition.column && 
-  snake.row === randomPosition.row
- ) {
-  spaceIsAvailable = false
- }
+  for (var i = 0; i < snake.body.length; i++) {
+    var snakePart = snake.body[i];
   
+  if (
+    snakePart.column === randomPosition.column &&
+    snakePart.row === randomPosition.row
+  ) {
+    spaceIsAvailable = false;
+  }
+
   return randomPosition;
+}
 }
 
 function calculateHighScore() {
