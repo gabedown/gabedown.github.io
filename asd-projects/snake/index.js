@@ -285,6 +285,7 @@ function makeSnakeSquare(row, column) {
   // assign the row and column position
   snakeSquare.row = row;
   snakeSquare.column = column;
+  
 
   // set the snake’s position visually
   repositionSquare(snakeSquare);
