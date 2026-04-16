@@ -285,7 +285,6 @@ function makeSnakeSquare(row, column) {
   // assign the row and column position
   snakeSquare.row = row;
   snakeSquare.column = column;
-  
 
   // set the snake’s position visually
   repositionSquare(snakeSquare);
@@ -359,19 +358,19 @@ function getRandomAvailablePosition() {
       not occupied by a snakeSquare in the snake's body. If it is then set 
       spaceIsAvailable to false so that a new position is generated.
     */
-  }
-  for (var i = 0; i < snake.body.length; i++) {
-    var snakePart = snake.body[i];
-  
-  if (
-    snakePart.column === randomPosition.column &&
-    snakePart.row === randomPosition.row
-  ) {
-    spaceIsAvailable = false;
-  }
 
-  return randomPosition;
-}
+    for (var i = 0; i < snake.body.length; i++) {
+      var snakePart = snake.body[i];
+    }
+    if (
+      snakePart.column === randomPosition.column &&
+      snakePart.row === randomPosition.row
+    ) {
+      spaceIsAvailable = false;
+    }
+
+    return randomPosition;
+  }
 }
 
 function calculateHighScore() {
