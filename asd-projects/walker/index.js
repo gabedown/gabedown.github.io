@@ -50,6 +50,7 @@ function runProgram(){
 function newFrame( repositionGameItem
 ) {
   repositionGameItem
+  redrawGameItem
 
 };
 
