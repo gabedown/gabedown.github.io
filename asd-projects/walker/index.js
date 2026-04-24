@@ -6,38 +6,53 @@ function runProgram(){
   ////////////////////////////////////////////////////////////////////////////////
   //////////////////////////// SETUP /////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
-
+  var walker = {
+    X: 9,
+    Y: 9,
+    speedX: 9,
+    speedY: 9
+  };
+  const KEY = {
+    ENTER: 13,
+    LEFT: 65,
+    UP: 87,
+    RIGHT: 68,
+    DOWN: 83,
+  }
+  
   // Constant Variables
   var FRAME_RATE = 60;
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
   
   // Game Item Objects
-
-
+  
+  
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
   
   /* 
   This section is where you set up event listeners for user input.
   For example, if you wanted to handle a click event on the document, you would replace 'eventType' with 'click', and if you wanted to execute a function named 'handleClick', you would replace 'handleEvent' with 'handleClick'.
-
+  
   Note: You can have multiple event listeners for different types of events.
   */
-  $(document).on('keydown', handleKeyDown);  
-  console.log(event.which)            
+ $(document).on('keydown', handleKeyDown);              
+ 
+ ////////////////////////////////////////////////////////////////////////////////
+ ///////////////////////// CORE LOGIC ///////////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////
+ 
+ /* 
+ On each "tick" of the timer, a new frame is dynamically drawn using JavaScript
+ by calling this function and executing the code inside.
+ */
 
-  ////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////// CORE LOGIC ///////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////
+function newFrame( repositionGameItem
+) {
+  repositionGameItem
 
-  /* 
-  On each "tick" of the timer, a new frame is dynamically drawn using JavaScript
-  by calling this function and executing the code inside.
-  */
-  function newFrame() {
-    
+};
 
-  }
   
   /* 
   This section is where you set up the event handlers for user input.
@@ -45,13 +60,27 @@ function runProgram(){
   
   Note: You can have multiple event handlers for different types of events.
   */
-  function handleEvent(event) {
-
+ 
+  function handleKeyDown(event) {
+  if (event.which === KEY.LEFT) {
+  console.log("left pressed");
+}  console.log(event.which);
   }
 
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
+
+  function repositionGameItem() {
+    horizontalSpeed = walker.speedX
+     verticalSpeed = walker.speedY
+
+  }
+  function redrawGameItem(){
+    
+$("#walker").css("left", walker.x);
+$("#walker").css("top", walker.y);
+  }
 
   
   function endGame() {
@@ -61,5 +90,5 @@ function runProgram(){
     // turn off event handlers
     $(document).off();
   }
-  
+  console.log("Walker position:", walker.x, walker.y);
 }
