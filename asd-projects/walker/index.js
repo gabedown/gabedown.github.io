@@ -73,8 +73,8 @@ function newFrame( repositionGameItem
   ////////////////////////////////////////////////////////////////////////////////
 
   function repositionGameItem() {
-    horizontalSpeed = walker.speedX
-     verticalSpeed = walker.speedY
+    horizontalSpeed = walker.speedX + walker.X + walkerY
+     verticalSpeed = walker.speedY + walker.X + walkerY
 
   }
   function redrawGameItem(){
