@@ -47,10 +47,9 @@ function runProgram(){
  by calling this function and executing the code inside.
  */
 
-function newFrame( repositionGameItem
-) {
-  repositionGameItem
-  redrawGameItem
+function newFrame() {
+  repositionGameItem()
+  redrawGameItem()
 
 };
 
@@ -73,8 +72,8 @@ function newFrame( repositionGameItem
   ////////////////////////////////////////////////////////////////////////////////
 
   function repositionGameItem() {
-    horizontalSpeed = walker.speedX + walker.X + walkerY
-     verticalSpeed = walker.speedY + walker.X + walkerY
+    walker.Y = walker.speedY + walker.X + walker
+     walker.x = walker.X + walker.X + walker
 
   }
   function redrawGameItem(){
@@ -93,5 +92,5 @@ $("#walker").css("top", walker.y);
   }
   console.log("Walker position:", walker.x, walker.y);
 }
-redarawGameItem("$#walker").css("left", walker.x)
+redrawGameItem("$#walker").css("left", walker.x)
 $("#walker").css("top", walker.y);
