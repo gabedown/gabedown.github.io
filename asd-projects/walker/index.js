@@ -63,14 +63,16 @@ function newFrame() {
  
   function handleKeyDown(event) {
   if (event.which === KEY.LEFT) {
-  console.log("left pressed");
+  console.log("left pressed");}
+  
   if (event.which === KEY.UP) {
-  console.log(" pressed");
+  console.log(" pressed");}
+
   if (event.which === KEY.RIGHT) {
-  console.log("right pressed");
+  console.log("right pressed");}
   
   }if (event.which === KEY.DOWN) {
-  console.log("DOWN pressed");
+  console.log("DOWN pressed");}
 
   }
   }
