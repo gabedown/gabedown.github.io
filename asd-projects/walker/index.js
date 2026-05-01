@@ -71,12 +71,12 @@ function newFrame() {
   if (event.which === KEY.RIGHT) {
   console.log("right pressed");}
   
-  }if (event.which === KEY.DOWN) {
+  if (event.which === KEY.DOWN) {
   console.log("DOWN pressed");}
 
   }
   }
-  }
+  
 
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
