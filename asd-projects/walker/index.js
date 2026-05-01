@@ -93,3 +93,5 @@ $("#walker").css("top", walker.y);
   }
   console.log("Walker position:", walker.x, walker.y);
 }
+redarawGameItem("$#walker").css("left", walker.x)
+$("#walker").css("top", walker.y);

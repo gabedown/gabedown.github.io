@@ -5,13 +5,13 @@ body {
 #board {
   width: 440px;
   height: 440px;
-  border: 1px solid rgb(112, 245, 255);
-  background-color: rgb(0, 255, 128);
+  border: 10px solid rgb(255, 98, 0);
+  background-color: rgb(0, 187, 255);
   position: relative;
 }
 
 #walker {
-  background-color: rgb(0, 38, 255);
+  background-color: rgb(115, 0, 255);
   width: 30px;
   height: 30px;
   position: absolute;
