@@ -48,8 +48,8 @@ function runProgram(){
  */
 
 function newFrame() {
-  repositionGameItem()
-  redrawGameItem()
+  repositionGameItem();
+  redrawGameItem();
 
 };
 
@@ -72,8 +72,8 @@ function newFrame() {
   ////////////////////////////////////////////////////////////////////////////////
 
   function repositionGameItem() {
-    walker.Y = walker.speedY + walker.X + walker
-     walker.x = walker.X + walker.X + walker
+    walker.y = walker.y + walker.speedY
+     walker.x = walker.x + walker.speedX 
 
   }
   function redrawGameItem(){
@@ -92,5 +92,5 @@ $("#walker").css("top", walker.y);
   }
   console.log("Walker position:", walker.x, walker.y);
 }
-redrawGameItem("$#walker").css("left", walker.x)
-$("#walker").css("top", walker.y);
+// redrawGameItem("$#walker").css("left", walker.x)
+// $("#walker").css("top", walker.y);
