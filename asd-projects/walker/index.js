@@ -7,17 +7,17 @@ function runProgram(){
   //////////////////////////// SETUP /////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
   var walker = {
-    X: 9,
-    Y: 9,
-    speedX: 9,
-    speedY: 9
+    x: 0,
+    y: 0,
+    speedX: 0,
+    speedY: 0
   };
   const KEY = {
     ENTER: 13,
-    LEFT: 65,
-    UP: 87,
-    RIGHT: 68,
-    DOWN: 83,
+    LEFT: 37,
+    UP: 38,
+    RIGHT: 39,
+    DOWN: 40,
   }
   
   // Constant Variables
@@ -92,5 +92,8 @@ $("#walker").css("top", walker.y);
   }
   console.log("Walker position:", walker.x, walker.y);
 }
-// redrawGameItem("$#walker").css("left", walker.x)
-// $("#walker").css("top", walker.y);
+  $("#walker").css("left", walker.x)
+ $("#walker").css("top", walker.y);
+ if (37){
+  setSpeed === -5
+ }
