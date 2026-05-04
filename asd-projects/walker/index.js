@@ -64,18 +64,18 @@ function newFrame() {
   function handleKeyDown(event) {
   if (event.which === KEY.LEFT) {
   console.log("left pressed");}
-  
+  walker.speedX = -5
   if (event.which === KEY.UP) {
   console.log(" pressed");}
-
+walker.speedY = -5
   if (event.which === KEY.RIGHT) {
   console.log("right pressed");}
-  
+  walker.speedX = 5 
   if (event.which === KEY.DOWN) {
   console.log("DOWN pressed");}
-
+  walker.speedY = 5
   }
-  }
+  
   
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -103,8 +103,5 @@ $("#walker").css("top", walker.y);
   }
   console.log("Walker position:", walker.x, walker.y);
 }
-  $("#walker").css("left", walker.x)
- $("#walker").css("top", walker.y);
- if (37){
-  setSpeed === -5
- }
+ 
+
