@@ -119,20 +119,21 @@ $("#walker").css("top", walker.y);
     $(document).off();
   }
   console.log("Walker position:", walker.x, walker.y);
-}
+
  
 
 function wallCollision() {
-  if (walker.X < 0){
-    walker.X -= walker.speedX;
+  if (walker.x < 0){
+    walker.x -= walker.speedx;
   }
-  if (walker.X + 50 > $("#board").width()){
-    walker.X -= walker.speedX;
+  if (walker.x + 50 > $("#board").width()){
+    walker.x -= walker.speedx;
   }
-  if (walker.Y < 0 ){
-    walker.Y -= walker.speedY;
+  if (walker.x < 0 ){
+    walker.x -= walker.speedY;
   }
-  if (walker.Y = 50> $("#board").width()){
-    walker.Y -= walker.speedY;
+  if (walker.y + 50> $("#board").width()){
+    walker.y -= walker.speedy;
   }
+}
 }
