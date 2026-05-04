@@ -18,7 +18,7 @@ function runProgram(){
     UP: 38,
     RIGHT: 39,
     DOWN: 40,
-  }
+  } 
   
   // Constant Variables
   var FRAME_RATE = 60;
@@ -63,17 +63,32 @@ function newFrame() {
  
   function handleKeyDown(event) {
   if (event.which === KEY.LEFT) {
-  console.log("left pressed");}
-  walker.speedX = -5
+  console.log("left pressed");
+  walker.speedX = -5}
   if (event.which === KEY.UP) {
-  console.log(" pressed");}
-walker.speedY = -5
+  console.log(" pressed");
+walker.speedY = -5}
   if (event.which === KEY.RIGHT) {
-  console.log("right pressed");}
-  walker.speedX = 5 
+  console.log("right pressed");
+  walker.speedX = 5}
   if (event.which === KEY.DOWN) {
-  console.log("DOWN pressed");}
-  walker.speedY = 5
+  console.log("DOWN pressed");
+  walker.speedY = 5}
+  }
+  function handleKeyDown(event) {
+      if (event.which === KEY.LEFT) {
+  console.log("left pressed");
+  walker.speedX = 0}
+  if (event.which === KEY.UP) {
+  console.log(" pressed");
+walker.speedY = 0}
+  if (event.which === KEY.RIGHT) {
+  console.log("right pressed");
+  walker.speedX = 0}
+  if (event.which === KEY.DOWN) {
+  console.log("DOWN pressed");
+  walker.speedY = 0}
+
   }
   
   
