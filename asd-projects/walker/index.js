@@ -36,8 +36,8 @@ function runProgram(){
   
   Note: You can have multiple event listeners for different types of events.
   */
- $(document).on('keydown', handleKeyDown);              
- 
+ $(document).on("keydown", handleKeyDown);              
+ $(document).on("keyUp", handleKeyUp); 
  ////////////////////////////////////////////////////////////////////////////////
  ///////////////////////// CORE LOGIC ///////////////////////////////////////////
  ////////////////////////////////////////////////////////////////////////////////
@@ -75,7 +75,8 @@ walker.speedY = -5}
   console.log("DOWN pressed");
   walker.speedY = 5}
   }
-  function handleKeyDown(event) {
+
+  function handleKeyup(event) {
       if (event.which === KEY.LEFT) {
   console.log("left pressed");
   walker.speedX = 0}
