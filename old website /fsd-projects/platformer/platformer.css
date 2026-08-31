@@ -1,0 +1,21 @@
+body {
+  margin: 0px;
+}
+
+canvas {
+  background-color: lightblue;
+  margin: 20px;
+}
+
+img {
+  display: none;
+}
+var collectableList {
+  database: {
+    image: "images/collectables/database.png";
+  }
+  diamond: {
+    image: "images/collectables/diamond https://drive.google.com/file/d/1KWimx4R_wS5qv4GLCYybr2dBEtTRYE1T/view";
+    
+  }
+}
